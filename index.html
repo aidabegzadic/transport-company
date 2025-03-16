@@ -8,129 +8,109 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            color: #333;
-            position: relative;
+            background-color: #f4f4f4;
         }
-        .background-container {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('logo.jpg') no-repeat center center fixed;
-            background-size: cover;
-            filter: blur(5px);
-            z-index: -1;
-        }
-        .content {
-            position: relative;
-            z-index: 2;
-            padding: 20px;
-        }
-        header {
-            background: rgba(0, 74, 173, 0.85);
+        .hero {
+            background: url('logo.jpg') no-repeat center center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
             text-align: center;
-            padding: 40px;
-            font-size: 24px;
+            font-size: 2rem;
             font-weight: bold;
+            position: relative;
         }
-        nav {
-            background: rgba(0, 53, 128, 0.85);
-            padding: 15px;
-            text-align: center;
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5);
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
+        .hero h1 {
+            position: relative;
+            z-index: 1;
         }
         .container {
-            width: 80%;
-            margin: auto;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            margin-top: 30px;
-        }
-        .services-list li {
-            font-size: 18px;
-            padding: 8px 0;
+            padding: 40px 20px;
         }
         footer {
+            background: #004aad;
+            color: white;
             text-align: center;
             padding: 20px;
-            background: rgba(0, 74, 173, 0.9);
-            color: white;
-            margin-top: 40px;
-            font-size: 16px;
-        }
-        .btn-primary {
-            background: #004aad;
-            border: none;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 5px;
-        }
-        .btn-primary:hover {
-            background: #003580;
         }
     </style>
 </head>
 <body>
-    <div class="background-container"></div>
-    <div class="content">
-        <header>
-            <h1>Hitransporte</h1>
-            <p>Zuverlässige Umzugs- & Lieferdienste</p>
-        </header>
-        
-        <nav>
-            <ul>
-                <li><a href="#home">Startseite</a></li>
-                <li><a href="#services">Leistungen</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-        
-        <div class="container" id="services">
-            <h2>Unsere Leistungen</h2>
-            <p>Wir bieten hochwertige Transportlösungen für Ihre Bedürfnisse:</p>
-            <ul class="services-list">
-                <li>🚚 Umzüge für Häuser & Büros</li>
-                <li>📦 Paketlieferungen</li>
-                <li>🛋️ Möbeltransport</li>
-                <li>🚀 Expressversand</li>
-            </ul>
-            <button class="btn btn-primary">Jetzt Angebot anfordern</button>
-        </div>
-        
-        <div class="container" id="contact">
-            <h2>Kontakt</h2>
-            <p><strong>Email:</strong> info@hitransporte.com</p>
-            <p><strong>Telefon:</strong> +123 456 789</p>
-        </div>
-        
-        <footer>
-            <p>&copy; 2025 Hitransporte. Alle Rechte vorbehalten.</p>
-        </footer>
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Hitransporte - Ihr Partner für Umzüge & Logistik</h1>
     </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Hitransporte</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Leistungen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#quote">Angebot anfordern</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Services Section -->
+    <div class="container" id="services">
+        <h2 class="text-center">Unsere Leistungen</h2>
+        <div class="row text-center">
+            <div class="col-md-4"><h4>🏠 Umzüge</h4><p>Privat- & Firmenumzüge professionell erledigt.</p></div>
+            <div class="col-md-4"><h4>🚚 Möbeltransport</h4><p>Sicherer Transport Ihrer wertvollen Möbel.</p></div>
+            <div class="col-md-4"><h4>📦 Lagerung</h4><p>Flexible Lagermöglichkeiten für Ihre Sachen.</p></div>
+        </div>
+    </div>
+    
+    <!-- Quote Request Form -->
+    <div class="container" id="quote">
+        <h2 class="text-center">Kostenloses Angebot anfordern</h2>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nachricht</label>
+                <textarea class="form-control" rows="4"></textarea>
+            </div>
+            <button class="btn btn-primary">Absenden</button>
+        </form>
+    </div>
+    
+    <!-- Contact Section -->
+    <div class="container" id="contact">
+        <h2 class="text-center">Kontakt</h2>
+        <p><strong>Email:</strong> info@hitransporte.com</p>
+        <p><strong>Telefon:</strong> +123 456 789</p>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Hitransporte. Alle Rechte vorbehalten.</p>
+    </footer>
 </body>
 </html>
