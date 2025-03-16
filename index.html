@@ -13,13 +13,25 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
+            background: #f4f4f4;
+            color: #333;
+            position: relative;
+        }
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: url('logo.jpg') no-repeat center center fixed;
             background-size: cover;
-            filter: blur(3px);
+            filter: blur(5px);
+            z-index: -1;
         }
         .content {
             position: relative;
             z-index: 2;
+            padding: 20px;
         }
         header {
             background: rgba(0, 74, 173, 0.85);
@@ -64,6 +76,7 @@
     </style>
 </head>
 <body>
+    <div class="background-container"></div>
     <div class="content">
         <header>
             <h1>Hitransporte</h1>
