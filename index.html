@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         body {
             font-family: 'Poppins', sans-serif;
@@ -37,11 +38,13 @@
             background: rgba(0, 74, 173, 0.85);
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 40px;
+            font-size: 24px;
+            font-weight: bold;
         }
         nav {
             background: rgba(0, 53, 128, 0.85);
-            padding: 10px;
+            padding: 15px;
             text-align: center;
         }
         nav ul {
@@ -50,28 +53,44 @@
         }
         nav ul li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-size: 18px;
             font-weight: bold;
         }
         .container {
             width: 80%;
             margin: auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-top: 20px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        .services-list li {
+            font-size: 18px;
+            padding: 8px 0;
         }
         footer {
             text-align: center;
-            padding: 10px;
-            background: rgba(0, 74, 173, 0.85);
+            padding: 20px;
+            background: rgba(0, 74, 173, 0.9);
             color: white;
-            margin-top: 20px;
+            margin-top: 40px;
+            font-size: 16px;
+        }
+        .btn-primary {
+            background: #004aad;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .btn-primary:hover {
+            background: #003580;
         }
     </style>
 </head>
@@ -94,12 +113,13 @@
         <div class="container" id="services">
             <h2>Unsere Leistungen</h2>
             <p>Wir bieten hochwertige Transportlösungen für Ihre Bedürfnisse:</p>
-            <ul>
+            <ul class="services-list">
                 <li>🚚 Umzüge für Häuser & Büros</li>
                 <li>📦 Paketlieferungen</li>
                 <li>🛋️ Möbeltransport</li>
                 <li>🚀 Expressversand</li>
             </ul>
+            <button class="btn btn-primary">Jetzt Angebot anfordern</button>
         </div>
         
         <div class="container" id="contact">
